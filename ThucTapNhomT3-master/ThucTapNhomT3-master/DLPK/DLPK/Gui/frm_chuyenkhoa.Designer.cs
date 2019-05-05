@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.pnl_head = new System.Windows.Forms.Panel();
-            this.pnl_mainCK = new System.Windows.Forms.Panel();
             this.menu_head = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dànhChoBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dànhChoBácSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnl_danhsachBSCK = new System.Windows.Forms.Panel();
+            this.pnl_mainCK = new System.Windows.Forms.Panel();
             this.pnl_thongtinCK = new System.Windows.Forms.Panel();
+            this.pnl_danhsachBSCK = new System.Windows.Forms.Panel();
+            this.lvChuyenKhoa = new System.Windows.Forms.ListView();
             this.pnl_head.SuspendLayout();
-            this.pnl_mainCK.SuspendLayout();
             this.menu_head.SuspendLayout();
+            this.pnl_mainCK.SuspendLayout();
+            this.pnl_danhsachBSCK.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_head
@@ -50,16 +52,6 @@
             this.pnl_head.Name = "pnl_head";
             this.pnl_head.Size = new System.Drawing.Size(800, 53);
             this.pnl_head.TabIndex = 0;
-            // 
-            // pnl_mainCK
-            // 
-            this.pnl_mainCK.Controls.Add(this.pnl_thongtinCK);
-            this.pnl_mainCK.Controls.Add(this.pnl_danhsachBSCK);
-            this.pnl_mainCK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_mainCK.Location = new System.Drawing.Point(0, 53);
-            this.pnl_mainCK.Name = "pnl_mainCK";
-            this.pnl_mainCK.Size = new System.Drawing.Size(800, 397);
-            this.pnl_mainCK.TabIndex = 1;
             // 
             // menu_head
             // 
@@ -79,6 +71,7 @@
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
             this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.trangChủToolStripMenuItem.Text = "Trang Chủ";
+            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // dànhChoBệnhNhânToolStripMenuItem
             // 
@@ -92,14 +85,15 @@
             this.dànhChoBácSĩToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.dànhChoBácSĩToolStripMenuItem.Text = "Dành cho Bác sĩ";
             // 
-            // pnl_danhsachBSCK
+            // pnl_mainCK
             // 
-            this.pnl_danhsachBSCK.BackColor = System.Drawing.Color.White;
-            this.pnl_danhsachBSCK.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_danhsachBSCK.Location = new System.Drawing.Point(0, 0);
-            this.pnl_danhsachBSCK.Name = "pnl_danhsachBSCK";
-            this.pnl_danhsachBSCK.Size = new System.Drawing.Size(549, 397);
-            this.pnl_danhsachBSCK.TabIndex = 0;
+            this.pnl_mainCK.Controls.Add(this.pnl_thongtinCK);
+            this.pnl_mainCK.Controls.Add(this.pnl_danhsachBSCK);
+            this.pnl_mainCK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_mainCK.Location = new System.Drawing.Point(0, 53);
+            this.pnl_mainCK.Name = "pnl_mainCK";
+            this.pnl_mainCK.Size = new System.Drawing.Size(800, 397);
+            this.pnl_mainCK.TabIndex = 1;
             // 
             // pnl_thongtinCK
             // 
@@ -110,6 +104,28 @@
             this.pnl_thongtinCK.Size = new System.Drawing.Size(208, 397);
             this.pnl_thongtinCK.TabIndex = 1;
             // 
+            // pnl_danhsachBSCK
+            // 
+            this.pnl_danhsachBSCK.BackColor = System.Drawing.Color.White;
+            this.pnl_danhsachBSCK.Controls.Add(this.lvChuyenKhoa);
+            this.pnl_danhsachBSCK.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_danhsachBSCK.Location = new System.Drawing.Point(0, 0);
+            this.pnl_danhsachBSCK.Name = "pnl_danhsachBSCK";
+            this.pnl_danhsachBSCK.Size = new System.Drawing.Size(549, 397);
+            this.pnl_danhsachBSCK.TabIndex = 0;
+            // 
+            // lvChuyenKhoa
+            // 
+            this.lvChuyenKhoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvChuyenKhoa.FullRowSelect = true;
+            this.lvChuyenKhoa.Location = new System.Drawing.Point(0, 0);
+            this.lvChuyenKhoa.Name = "lvChuyenKhoa";
+            this.lvChuyenKhoa.Size = new System.Drawing.Size(549, 394);
+            this.lvChuyenKhoa.TabIndex = 0;
+            this.lvChuyenKhoa.UseCompatibleStateImageBehavior = false;
+            this.lvChuyenKhoa.View = System.Windows.Forms.View.List;
+            this.lvChuyenKhoa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lvChuyenKhoa_MouseClick);
+            // 
             // frm_chuyenkhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,12 +135,13 @@
             this.Controls.Add(this.pnl_head);
             this.MainMenuStrip = this.menu_head;
             this.Name = "frm_chuyenkhoa";
-            this.Text = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnl_head.ResumeLayout(false);
             this.pnl_head.PerformLayout();
-            this.pnl_mainCK.ResumeLayout(false);
             this.menu_head.ResumeLayout(false);
             this.menu_head.PerformLayout();
+            this.pnl_mainCK.ResumeLayout(false);
+            this.pnl_danhsachBSCK.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -132,12 +149,13 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_head;
-        private System.Windows.Forms.MenuStrip menu_head;
         private System.Windows.Forms.Panel pnl_mainCK;
+        private System.Windows.Forms.Panel pnl_thongtinCK;
+        private System.Windows.Forms.Panel pnl_danhsachBSCK;
+        private System.Windows.Forms.ListView lvChuyenKhoa;
+        private System.Windows.Forms.MenuStrip menu_head;
         private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dànhChoBệnhNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dànhChoBácSĩToolStripMenuItem;
-        private System.Windows.Forms.Panel pnl_thongtinCK;
-        private System.Windows.Forms.Panel pnl_danhsachBSCK;
     }
 }

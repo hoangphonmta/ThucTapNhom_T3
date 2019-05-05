@@ -1,6 +1,6 @@
 ﻿namespace DLPK
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_gktq = new System.Windows.Forms.Button();
             this.btn_bvpk = new System.Windows.Forms.Button();
             this.btn_bs = new System.Windows.Forms.Button();
             this.btn_ck = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.trangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chuyênKhoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cẩmNangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.liênHệToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // vScrollBar1
@@ -91,6 +85,7 @@
             this.btn_bs.TabIndex = 0;
             this.btn_bs.Text = "Chọn Bác sĩ";
             this.btn_bs.UseVisualStyleBackColor = true;
+            this.btn_bs.Click += new System.EventHandler(this.btn_bs_Click);
             // 
             // btn_ck
             // 
@@ -101,62 +96,20 @@
             this.btn_ck.TabIndex = 0;
             this.btn_ck.Text = "Chọn Chuyên Khoa";
             this.btn_ck.UseVisualStyleBackColor = true;
+            this.btn_ck.Click += new System.EventHandler(this.btn_ck_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(88)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trangToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(782, 42);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // trangToolStripMenuItem
-            // 
-            this.trangToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chuyênKhoaToolStripMenuItem,
-            this.cẩmNangToolStripMenuItem,
-            this.liênHệToolStripMenuItem});
-            this.trangToolStripMenuItem.Name = "trangToolStripMenuItem";
-            this.trangToolStripMenuItem.Size = new System.Drawing.Size(72, 38);
-            this.trangToolStripMenuItem.Text = "Trang chủ";
-            // 
-            // chuyênKhoaToolStripMenuItem
-            // 
-            this.chuyênKhoaToolStripMenuItem.Name = "chuyênKhoaToolStripMenuItem";
-            this.chuyênKhoaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.chuyênKhoaToolStripMenuItem.Text = "Chuyên khoa";
-            // 
-            // cẩmNangToolStripMenuItem
-            // 
-            this.cẩmNangToolStripMenuItem.Name = "cẩmNangToolStripMenuItem";
-            this.cẩmNangToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.cẩmNangToolStripMenuItem.Text = "Cẩm Nang";
-            // 
-            // liênHệToolStripMenuItem
-            // 
-            this.liênHệToolStripMenuItem.Name = "liênHệToolStripMenuItem";
-            this.liênHệToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.liênHệToolStripMenuItem.Text = "Liên Hệ";
-            // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.vScrollBar1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -168,11 +121,6 @@
         private System.Windows.Forms.Button btn_bvpk;
         private System.Windows.Forms.Button btn_bs;
         private System.Windows.Forms.Button btn_ck;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem trangToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chuyênKhoaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cẩmNangToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem liênHệToolStripMenuItem;
     }
 }
 

@@ -46,7 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BacSiBLL.cs" />
+    <Compile Include="BLL\ChuyenKhoaBLL.cs" />
+    <Compile Include="DAO\BacSiDAO.cs" />
+    <Compile Include="DAO\ChuyenKhoaDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="Entity\BacSi.cs" />
+    <Compile Include="Entity\BenhNhan.cs" />
+    <Compile Include="Entity\ChuyenKhoa.cs" />
+    <Compile Include="Entity\GoiKhamTQ.cs" />
+    <Compile Include="Entity\LoaiGoi.cs" />
+    <Compile Include="Entity\PhieuHen.cs" />
+    <Compile Include="Entity\PhieuHenKhamTQ.cs" />
+    <Compile Include="Entity\PhongKham.cs" />
+    <Compile Include="Gui\frmDatLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmDatLich.Designer.cs">
+      <DependentUpon>frmDatLich.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frm_bvpk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,11 +77,11 @@
     <Compile Include="Gui\frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\frm_ luachon.cs">
+    <Compile Include="Gui\frmBacSi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gui\frm_ luachon.Designer.cs">
-      <DependentUpon>frm_ luachon.cs</DependentUpon>
+    <Compile Include="Gui\frmBacSi.Designer.cs">
+      <DependentUpon>frmBacSi.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\frm_chuyenkhoa.cs">
       <SubType>Form</SubType>
@@ -82,8 +100,8 @@
     <EmbeddedResource Include="Gui\frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_ luachon.resx">
-      <DependentUpon>frm_ luachon.cs</DependentUpon>
+    <EmbeddedResource Include="Gui\frmBacSi.resx">
+      <DependentUpon>frmBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

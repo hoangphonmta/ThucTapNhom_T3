@@ -25,7 +25,7 @@ namespace DLPK.DAO
             }
         }
         private DataProvider() { }
-        private string strconnection = @"Data Source=DESKTOP-NDE0CD0\SQLEXPRESS;Initial Catalog=KhuVuiChoi;Integrated Security=True";
+        private string strconnection = @"Data Source=DESKTOP-NDE0CD0\SQLEXPRESS;Initial Catalog=QuanLyDatLich;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

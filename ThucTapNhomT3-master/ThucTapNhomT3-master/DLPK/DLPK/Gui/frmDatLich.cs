@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DLPK
+namespace DLPK.Gui
 {
-    public partial class Form1 : Form
+    public partial class frmDatLich : Form
     {
-        public Form1()
+        public frmDatLich()
         {
             InitializeComponent();
         }
